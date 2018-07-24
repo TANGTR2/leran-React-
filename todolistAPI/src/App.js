@@ -5,11 +5,15 @@ import Todos from './container/TodosContainer';
 import FilterTodo from './container/FilterTodoContainer';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { Card } from 'antd';
+import { Row, Col } from 'antd';
 
 class App extends Component {
   render() {
     return (
-      <Card className="container" style={{ align:"cente"}}>
+        <Row>
+      <Col span={8}></Col>
+      <Col span={8}>
+      <Card style={{width:400}}>
         <div>
           <h2>Jquery To Do List</h2>
           <p>
@@ -25,6 +29,8 @@ class App extends Component {
         </BrowserRouter>
         <FilterTodo />
       </Card>
+      </Col>
+    </Row>
     );
   }
 }
